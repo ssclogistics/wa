@@ -193,13 +193,22 @@
     color: var(--main-five-1);
     font-size: var(--fs-xxl);
     text-align: center;
+    opacity: 0;
+    animation: fadeInOnce 3s ease-in-out forwards;
+    transform: translateY(20px);
    
 }
 .mainbanner__info p{
     text-align: center;
+    opacity: 0;
+    animation: fadeInOnceTwo 3s ease-in-out forwards;
+    animation-delay: 1.5s;
+    transform: translateY(-20px);
+    
 }
 .mainbanner__info p q{
     color: var(--main-five-1);
+    
     
 }
 .c2a__one{
@@ -213,6 +222,11 @@
     box-shadow: rgba(0, 0, 0, 0.5) 0px 19px 38px, rgba(0, 0, 0, 0.55) 0px 15px 12px;
     animation: pulse 1.3s infinite ease-in-out alternate;
     text-shadow: 1px 1px 3px black;
+
+    opacity: 0;
+    animation: fadeInOnceThree 1s ease-in-out forwards;
+    animation-delay: 3s;
+    /* transform: translateY(-20px); */
    
 }
 .c2a__one:hover{
@@ -237,8 +251,25 @@
 @keyframes pulse {
     from { transform: scale(1); }
     to { transform: scale(1.1); }
-  }
-
+}
+@keyframes fadeInOnce {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInOnceTwo {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInOnceThree {
+    to {
+        opacity: 1;
+        /* transform: translateY(0); */
+    }
+}
 @keyframes zoomInOut {
     0% {
         transform: scale(1);
