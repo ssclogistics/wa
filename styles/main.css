@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Prata&display=swap');
+
+:root {
+    --main-one-1: #481593;
+    --main-one-2: #6520D1;
+    --main-one-3: #752ED9;
+    --main-one-4: #8C4CDE;
+    --main-one-5: #A572E4;
+
+    --main-two-1: #141898;
+    --main-two-2: #1A23D2;
+    --main-two-3: #3537DA;
+    --main-two-4: #5656DF;
+    --main-two-5: #7C7AE5;
+
+    --main-three-1: #951188;
+    --main-three-2: #D11DBF;
+    --main-three-3: #DA24C8;
+    --main-three-4: #DF40D0;
+    --main-three-5: #E568DA;
+
+    --main-four-1: #000000;
+    --main-four-2: #030202;
+    --main-four-3: #0D0D0D;
+    --main-four-4: #4F4F4F;
+    --main-four-5: #868585;
+
+    --main-five-1: #ffffff;
+    --main-five-2: #f2f2f2;
+  
+    --ff-titles: "Prata", serif;
+    --ff-text: "Lato", sans-serif;
+   
+    --borders-one: 4px;
+    --borders-two: 8px;
+  
+    /* --shadow:; */
+  
+    --fs-xxl: clamp(5rem, 7vw + 2rem, 16rem);
+    --fs-xl: clamp(3rem, 5vw + 1rem, 10rem);
+    --fs-xs: clamp(2rem, 4vw + 1rem, 6rem);
+    --fs-titles: clamp(1.5rem, 1vw + 1.5rem, 3rem);
+    --fs-sub-titles: clamp(1.4rem, 2.5vw + 0.8rem, 2rem);
+    --fs-highlights: clamp(1rem, 2.2vw + 0.5rem, 1.5rem);
+    --fs-text: clamp(0.9rem, 1.5vw + 0.4rem, 1rem);
+  }
+  
+  * {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    
+    color: var(--main-four-3);
+    line-height: 100%;
+  }
+  
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--main-four-5); 
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--main-one-1); 
+    border-radius: 5px;
+    cursor: grab;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--main-one-2); 
+  }
+  
+  input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+  }
+  select {
+    outline: none;
+    border: none;
+  }
+  textarea {
+    outline: none;
+    border: none;
+  }
+  
+  input:focus {
+    outline: none;
+    border: none;
+  }
+  select:focus {
+    outline: none;
+    border: none;
+  }
+  textarea:focus {
+    outline: none;
+    border: none;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  body, html {
+    margin: 0;
+    /* overflow-x: hidden; */
+    padding: 0;
+    background-color: var(--main-six);
+    font-family: var(--ff-text);
+    font-display: swap;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--ff-titles);
+    font-weight: 100;
+  }
+  
+  p{
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+  }
+  q{
+    font-style: italic;
+    font-size: 1.2rem;
+  }
+
+
+  /* ---------------------------------- */
+
+.mainbanner__wrapper{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.mainbanner__background{
+    background: url(../media/backgrounds/willian-avalos_teatro-nacional-guatemala.webp) no-repeat center center / cover;
+    /* background-blend-mode: multiply; */
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    animation: zoomInOut 30s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+.mainbanner__texture{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+.mainbanner__name{
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    width: 100%;
+    height: 100%;
+    padding: 18rem 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mainbanner__info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+}
+.mainbanner__info h1{
+    color: var(--main-five-1);
+    font-size: var(--fs-xxl);
+    text-align: center;
+   
+}
+.mainbanner__info p{
+    text-align: center;
+}
+.mainbanner__info p q{
+    color: var(--main-five-1);
+    
+}
+.c2a__one{
+    background: linear-gradient(0deg, rgba(20,24,152,1) 0%, rgba(26,35,210,1) 100%);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 1.5rem 2rem;
+    border-radius: var(--borders-two);
+    margin-top: 6rem;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 19px 38px, rgba(0, 0, 0, 0.55) 0px 15px 12px;
+    animation: pulse 1.3s infinite ease-in-out alternate;
+    text-shadow: 1px 1px 3px black;
+   
+}
+.c2a__one:hover{
+    background: linear-gradient(0deg, rgba(72,21,147,1) 0%, rgba(101,32,209,1) 100%);
+    
+
+}
+
+
+
+/* ------------KEYFRAMES------------- */
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+  }
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+/* ---------------------------------- */
+
+
+/* -----------MEDIAQUERIES----------- */
+
+@media (max-width: 1483px) { }
+@media (max-width: 1280px) { }
+@media (max-width: 1150px) { 
+    .mainbanner__name{
+        padding: 18rem 2rem;
+    }
+    .c2a__one{
+        margin-top: 4rem;    
+    }
+}
+@media (max-width: 950px) {/*2 REM padding*/
+    .mainbanner__background{
+        background-position: right center;
+    }
+}
+
+@media (max-width: 768px) { 
+    .mainbanner__info h1{
+        font-size: 4rem;
+    }
+    .c2a__one{
+       
+        padding: 1.5rem;
+        
+       
+    }
+}
+
+@media (max-width: 576px) { /*1 REM padding*/
+    .mainbanner__name{
+        padding: 18rem 1rem;
+    }
+    .mainbanner__info h1{
+        font-size: 3.5rem;
+    }
+    .c2a__one{
+        margin-top: 3rem;
+     
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) { 
+    .mainbanner__info h1{
+        font-size: 3rem;
+    }
+    .c2a__one{
+        
+        padding: 1.2rem;
+        
+    }
+}
+
+@media (max-width: 455px) { 
+    .mainbanner__info h1{
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 350px) { 
+    .mainbanner__info h1{
+        font-size: 2.3rem;
+    }
+    .c2a__one{
+        
+        padding: 1rem;
+        
+    }
+}
+
+/* ---------------------------------- */
