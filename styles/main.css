@@ -221,6 +221,16 @@
 
 }
 
+.allrights__wrapper{
+    background-color: var(--main-four-3);
+    padding: 0.8rem 1rem;
+    width: 100%;
+}
+.allrights__wrapper p{
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+}
 
 
 /* ------------KEYFRAMES------------- */
