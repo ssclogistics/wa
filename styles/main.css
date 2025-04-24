@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Prata&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap'); */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap');
 
 :root {
     --main-one-1: #481593;
@@ -27,9 +30,10 @@
 
     --main-five-1: #ffffff;
     --main-five-2: #f2f2f2;
-  
-    --ff-titles: "Prata", serif;
-    --ff-text: "Lato", sans-serif;
+
+    --ff-titles: "Montserrat", sans-serif;
+    --ff-text: Arial, Helvetica, sans-serif;
+    --ff-special:"Rock Salt", cursive;
    
     --borders-one: 4px;
     --borders-two: 8px;
@@ -38,7 +42,7 @@
   
     --fs-xxl: clamp(5rem, 7vw + 2rem, 16rem);
     --fs-xl: clamp(3rem, 5vw + 1rem, 10rem);
-    --fs-xs: clamp(2rem, 4vw + 1rem, 6rem);
+    --fs-xs: clamp(2.2rem, 4vw + 1rem, 5rem);
     --fs-titles: clamp(1.5rem, 1vw + 1.5rem, 3rem);
     --fs-sub-titles: clamp(1.4rem, 2.5vw + 0.8rem, 2rem);
     --fs-highlights: clamp(1rem, 2.2vw + 0.5rem, 1.5rem);
@@ -55,7 +59,7 @@
     text-decoration: none;
     
     color: var(--main-four-3);
-    line-height: 100%;
+    /* line-height: 100%; */
   }
   
   *::before,
@@ -124,14 +128,15 @@
     margin: 0;
     /* overflow-x: hidden; */
     padding: 0;
-    background-color: var(--main-six);
+    background-color: var(--main-four-3);
     font-family: var(--ff-text);
     font-display: swap;
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--ff-titles);
-    font-weight: 100;
+    font-weight: 500;
+    line-height: 130%;
   }
   
   p{
@@ -141,21 +146,21 @@
   }
   q{
     font-style: italic;
-    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
   }
+/* ---------------------------------- */
 
 
-  /* ---------------------------------- */
+/* -----------MAIN BANNER------------ */
 
 .mainbanner__wrapper{
     width: 100%;
     height: auto;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 45px 50px -10px;
 }
-
 .mainbanner__background{
     background: url(../media/backgrounds/willian-avalos_teatro-nacional-guatemala.webp) no-repeat center center / cover;
-    /* background-blend-mode: multiply; */
     width: 100%;
     height: auto;
     position: relative;
@@ -175,7 +180,7 @@
     -webkit-backdrop-filter: blur(4px);
     width: 100%;
     height: 100%;
-    padding: 18rem 10rem;
+    padding: 18rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -187,54 +192,50 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background: red; */
 }
 .mainbanner__info h1{
     color: var(--main-five-1);
-    font-size: var(--fs-xxl);
+    font-size: 9rem;
     text-align: center;
     opacity: 0;
-    animation: fadeInOnce 3s ease-in-out forwards;
+    animation: fadeName 3s ease-in-out forwards;
     transform: translateY(20px);
-   
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
 }
 .mainbanner__info p{
     text-align: center;
     opacity: 0;
-    animation: fadeInOnceTwo 3s ease-in-out forwards;
+    animation: fadePhrase 3s ease-in-out forwards;
     animation-delay: 1.5s;
     transform: translateY(-20px);
-    
-}
-.mainbanner__info p q{
     color: var(--main-five-1);
-    
-    
+    font-weight: 100;
+}
+.mainbanner__info p cite{
+    color: var(--main-five-1);
+    font-size: 1.8rem;
+    font-weight: 100;    
 }
 .c2a__one{
     background: linear-gradient(0deg, rgba(20,24,152,1) 0%, rgba(26,35,210,1) 100%);
     color: white;
     text-transform: uppercase;
     font-weight: 600;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 3rem;
     border-radius: var(--borders-two);
-    margin-top: 6rem;
+    margin-top: 5rem;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 19px 38px, rgba(0, 0, 0, 0.55) 0px 15px 12px;
     animation: pulse 1.3s infinite ease-in-out alternate;
     text-shadow: 1px 1px 3px black;
-
     opacity: 0;
-    animation: fadeInOnceThree 1s ease-in-out forwards;
-    animation-delay: 3s;
-    /* transform: translateY(-20px); */
-   
+    animation:  fadeC2A 1s ease-in-out forwards,
+                pulse 1.3s infinite ease-in-out alternate;
+    animation-delay: 4s;
 }
 .c2a__one:hover{
     background: linear-gradient(0deg, rgba(72,21,147,1) 0%, rgba(101,32,209,1) 100%);
-    
-
 }
-
 .allrights__wrapper{
     background-color: var(--main-four-3);
     padding: 0.8rem 1rem;
@@ -245,29 +246,224 @@
     font-size: 0.9rem;
     text-align: center;
 }
+/* ---------------------------------- */
+
+
+/* -----------NEW RELEASE------------ */
+.music-container {
+    margin: 8rem 0;
+    width: 100%;
+    padding: 0 2rem;
+}
+.music-container h2{
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-family: var(--ff-special);
+    font-size: var(--fs-xs);
+}
+.tracks-grid {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.embed-container {
+    height: 352px;
+    width: 100%;
+    border-radius: 12px;
+    overflow-y: hidden;
+    background: #333333;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 19px 38px, rgba(0, 0, 0, 0.33) 0px 15px 12px;
+}
+.embed-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: var(--borders-two);    
+}
+.platform-c2a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.platform-c2a a{
+    color: white;
+    font-size: var(--fs-highlights);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #026d02;
+    padding: 1rem 2rem;
+    border-radius: var(--borders-two);
+    animation: pulse 1.3s infinite ease-in-out alternate;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 19px 38px, rgba(0, 0, 0, 0.33) 0px 15px 12px;
+}
+.platform-c2a svg {
+    margin-right: 1rem;
+}
+/* ---------------------------------- */
+
+
+/* -----------SONG HISTORY----------- */
+.song__history-wrapper{
+    padding: 0 2rem;
+}
+.song__history-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+  /*   overflow: auto; /* Clearfix para contener el float */ 
+    border-bottom: 1px dashed white;
+    padding-bottom: 4rem;
+}
+.imagen-flotante {
+    float: left;
+    width: 450px;
+    height: auto;
+    margin-right: 2rem;
+    margin-bottom: 1.2rem;
+    shape-outside: margin-box;
+    display: block;
+    background: #333333;
+    border-radius: 12px;
+}
+.imagen-flotante-2 {
+    float: right;
+    width: 450px;
+    height: auto;
+    margin-left: 2rem;
+    margin-bottom: 1.2rem;
+    shape-outside: margin-box;
+    display: block;
+    background: #333333;
+    border-radius: 12px;
+}
+.titulo {
+    color: white;
+    font-size: 2.5rem;
+    font-family: var(--ff-special);
+    margin-bottom: 1rem;
+}
+.texto {
+    text-align: justify;
+    line-height: 1.6;
+    color: white;
+    margin: 0;
+}
+/* ---------------------------------- */
+
+
+/* --------------ALBUMS-------------- */
+.container {
+    margin: 6rem auto 4rem auto;
+    padding: 0 4rem;
+}
+.container h2{
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-family: var(--ff-special);
+    font-size: var(--fs-xs);
+}
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    margin: 30px 0;
+}
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap:2rem;
+}
+.spotify-card {
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--main-one-3);
+    border-radius: 12px;
+    background: #333333;
+}
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.carousel-control {
+    background-color: #1ed760;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+.carousel-control:hover {
+    background-color: #026d02;
+}
+.navigation-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.dot.active {
+    background-color: #1ed760;
+}
+
+/* ---------------------------------- */
+
+
+
 
 
 /* ------------KEYFRAMES------------- */
 @keyframes pulse {
     from { transform: scale(1); }
-    to { transform: scale(1.1); }
+    to { transform: scale(1.04); }
 }
-@keyframes fadeInOnce {
+@keyframes fadeName {
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-@keyframes fadeInOnceTwo {
+@keyframes fadePhrase {
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-@keyframes fadeInOnceThree {
+@keyframes fadeC2A {
     to {
         opacity: 1;
-        /* transform: translateY(0); */
     }
 }
 @keyframes zoomInOut {
@@ -283,74 +479,213 @@
 
 /* -----------MEDIAQUERIES----------- */
 
-@media (max-width: 1483px) { }
-@media (max-width: 1280px) { }
+@media (max-width: 1483px) {
+/* -----------MAIN BANNER------------ */
+    .mainbanner__info h1{
+        font-size: 7rem;
+    }
+/* ---------------------------------- */
+
+/* -----------NEW RELEASE------------ */
+    .music-container {
+        padding: 0 2rem;
+    }
+/* ---------------------------------- */
+ }
+
+
+@media (max-width: 1280px) {
+
+}
+
+
 @media (max-width: 1150px) { 
-    .mainbanner__name{
-        padding: 18rem 2rem;
+/* -----------MAIN BANNER------------ */
+    .mainbanner__info h1{
+        font-size: 6rem;
     }
     .c2a__one{
         margin-top: 4rem;    
     }
+/* ---------------------------------- */
+
+/* --------------ALBUMS-------------- */
+    .spotify-card {
+        min-width: 40%;
+    }
+/* ---------------------------------- */
 }
+
+
 @media (max-width: 950px) {/*2 REM padding*/
+/* -----------MAIN BANNER------------ */
     .mainbanner__background{
         background-position: right center;
     }
-}
-
-@media (max-width: 768px) { 
     .mainbanner__info h1{
         font-size: 4rem;
     }
-    .c2a__one{
-       
-        padding: 1.5rem;
-        
-       
+/* ---------------------------------- */
+
+/* -----------NEW RELEASE------------ */
+    .tracks-grid {
+        flex-direction: column;
     }
+    .track-embed {
+        width: 100%;
+        height: 100%;
+    }
+/* ---------------------------------- */
+
+/* -----------SONG HISTORY----------- */
+    .imagen-flotante {
+        float: none;
+        display: block;
+        width: 80%;
+        margin: 0 auto 4rem auto;
+    }
+    .imagen-flotante-2 {
+        float: none;
+        display: block;
+        width: 80%;
+        margin: 0 auto 4rem auto;
+    }
+    .titulo {
+        text-align: center;
+    }
+/* ---------------------------------- */
+
+/* --------------ALBUMS-------------- */
+    .container {
+        padding: 0 2rem;
+    }
+    .spotify-card {
+        min-width: 50%;
+    }
+/* ---------------------------------- */
 }
 
+
+@media (max-width: 768px) { 
+/* -----------MAIN BANNER------------ */
+    .mainbanner__info h1{
+        font-size: 3.3rem;
+    }
+    .mainbanner__info p cite{
+        font-size: 1.5rem;
+    }
+    .c2a__one{
+        padding: 1.5rem;
+    }
+/* ---------------------------------- */
+
+/* --------------ALBUMS-------------- */
+    .spotify-card {
+        min-width: 60%;
+    }
+/* ---------------------------------- */
+}
+
+
 @media (max-width: 576px) { /*1 REM padding*/
+/* -----------MAIN BANNER------------ */
     .mainbanner__name{
         padding: 18rem 1rem;
     }
     .mainbanner__info h1{
-        font-size: 3.5rem;
+        font-size: 3rem;
+    }
+    .mainbanner__info p cite{
+        font-size: 1.2rem;
     }
     .c2a__one{
         margin-top: 3rem;
-     
         font-size: 0.9rem;
     }
+/* ---------------------------------- */
+
+/* -----------NEW RELEASE------------ */
+    .music-container {
+        padding: 0 1rem;
+    }
+/* ---------------------------------- */
+
+/* -----------SONG HISTORY----------- */
+    .song__history-wrapper{
+        padding: 0 1rem;
+    }
+/* ---------------------------------- */
+
+/* --------------ALBUMS-------------- */
+    .container {
+        padding: 0 1rem;
+    }
+    .spotify-card {
+        min-width: 70%;
+    }
+    .carousel {
+        gap:1rem;
+    }
+/* ---------------------------------- */
 }
+
 
 @media (max-width: 480px) { 
-    .mainbanner__info h1{
-        font-size: 3rem;
-    }
-    .c2a__one{
-        
-        padding: 1.2rem;
-        
-    }
-}
-
-@media (max-width: 455px) { 
+/* -----------MAIN BANNER------------ */
     .mainbanner__info h1{
         font-size: 2.6rem;
     }
-}
-
-@media (max-width: 350px) { 
-    .mainbanner__info h1{
-        font-size: 2.3rem;
+    .mainbanner__info p cite{
+        font-size: 1rem;
     }
     .c2a__one{
-        
-        padding: 1rem;
-        
+        padding: 1.2rem;
     }
+/* ---------------------------------- */
+
+/* -----------SONG HISTORY----------- */
+    .imagen-flotante {
+        width: 100%;
+    }
+/* ---------------------------------- */
+
+/* --------------ALBUMS-------------- */
+    .spotify-card {
+        min-width: 80%;
+    }
+/* ---------------------------------- */
 }
 
+
+@media (max-width: 455px) { 
+/* -----------MAIN BANNER------------ */
+    .mainbanner__info h1{
+        font-size: 1.8rem;
+    }
 /* ---------------------------------- */
+
+/* --------------ALBUMS-------------- */
+    .spotify-card {
+        min-width: 85%;
+    }
+/* ---------------------------------- */
+}
+
+
+@media (max-width: 350px) { 
+/* -----------MAIN BANNER------------ */
+    .mainbanner__info h1{
+        font-size: 1.5rem;
+    }
+    .c2a__one{
+        padding: 1rem;
+    }
+/* ---------------------------------- */
+
+/* --------------ALBUMS-------------- */
+    .spotify-card {
+        min-width: 90%;
+    }
+/* ---------------------------------- */
+}
+
